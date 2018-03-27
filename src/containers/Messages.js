@@ -7,8 +7,9 @@ import URL from "../components/chatTemplates/Bot/URL";
 import BotButtons from "../components/chatTemplates/Bot/BotButtons"
 import UserResponse from "../components/chatTemplates/User/UserResponse";
 import CustomRequest from "../components/chatTemplates/User/CustomRequest";
-import BotTime from "../components/chatTemplates/Bot/Time";
-import UserTime from "../components/chatTemplates/User/Time";
+import BotTime from "../components/chatTemplates/Bot/BotTime";
+import UserTime from "../components/chatTemplates/User/UserTime";
+import Cards from "../components/chatTemplates/Bot/Cards";
 
 
 class Messages extends Component {
@@ -35,6 +36,7 @@ class Messages extends Component {
                                 <BotReply reply={text.reply}/>
                                 <BotResponse response={text.response}/>
                                 <URL url={text.url}/>
+                                <Cards cardDetails = {text.cardDetails}/>
                             </div>
                         )
                     )

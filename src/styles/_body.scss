@@ -30,6 +30,15 @@ $height: 100vh;
       padding-top: 0.1em;
       padding-bottom: 0.1em;
     }
+
+    .custom-styles{
+      color: $info !important;
+      img{
+        width: 4em;
+        height: 7em;
+      }
+    }
+
   }
 
 
@@ -44,3 +53,4 @@ $height: 100vh;
     }
   }
 }
+

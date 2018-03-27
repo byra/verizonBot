@@ -19,7 +19,7 @@ class BotTime extends Component{
 
         return(
             <div className="d-flex flex-row">
-                <p className="rounded mr-1 chat-body__userBot">Tina</p>
+                <p className="rounded mr-1 chat-body__userBot">VIVA</p>
                 <p className="rounded chat-body__userBot">{hours +":"+minutes}</p>
             </div>
         );

@@ -24,9 +24,9 @@ export const chatMessages = (state = [], action) => {
                     userResponse: userResponse,
                     customRequest: customRequest,
                     url: null,
-                    reply: ["Welcome to Technical support! My name is Tina."],
+                    reply: ["Welcome to  Verizon Technical Support! My name is Viva."],
                     response: "What can I help you with today?",
-                    buttons: ["Technical Support", "Manage Account", "Billing Inquiry", "Account Cancellation"]
+                    buttons: ["Phones", "Plans", "Deals", "Manage Account"]
                 }
             ];
         case "Greeting":
@@ -41,7 +41,7 @@ export const chatMessages = (state = [], action) => {
                     reply: ["Hello there"],
                     response: "I can help you with the following",
                     url: null,
-                    buttons: ["Technical Support", "Manage Account", "Billing Inquiry", "Account Cancellation"]
+                    buttons: ["Phones", "Plans", "Deals", "Manage Account"]
                 }
             ];
         case "Bye":
@@ -61,10 +61,10 @@ export const chatMessages = (state = [], action) => {
             ];
 
 
-        case "Technical Support":
+        case "Phones":
             userResponse = null;
             customRequest = null;
-            if (action.payload.tracker.latest_message.text === "Technical Support") {
+            if (action.payload.tracker.latest_message.text === "Phones") {
                 userResponse = action.payload.tracker.latest_message.text;
             } else {
                 customRequest = action.payload.tracker.latest_message.text;
@@ -77,15 +77,15 @@ export const chatMessages = (state = [], action) => {
                     userResponse: userResponse,
                     customRequest: customRequest,
                     url: null,
-                    reply: ["Thank you, I can definitely help you out with Technical Support."],
-                    response: "Please describe your issue or question or Select a topic from frequently asked questions which can answer your question",
-                    buttons: ["Cannot Connect to Wifi", "I'm Connected But Cannot Reach Internet", "Device Limit Reached", "Frequent Disconnects"]
+                    reply: ["I can surely help you with Phones"],
+                    response: "Please choose a category",
+                    buttons: ["Smart Phone", "Basic Phone", "Pre-owned"]
                 }
             ];
-        case "Cannot Connect to Wifi":
+        case "Smart Phones":
             userResponse = null;
             customRequest = null;
-            if (action.payload.tracker.latest_message.text === "Cannot Connect to Wifi") {
+            if (action.payload.tracker.latest_message.text === "Smart Phone") {
                 userResponse = action.payload.tracker.latest_message.text;
             } else {
                 customRequest = action.payload.tracker.latest_message.text;
@@ -98,21 +98,16 @@ export const chatMessages = (state = [], action) => {
                     userResponse: userResponse,
                     customRequest: customRequest,
                     url: null,
-                    reply: ["Confirm your Wi-Fi is turned on. This option is usually located in the Settings menu.",
-                        "Confirm in your network settings that you are connected to a Boingo Network.",
-                        "Make sure your device is set to the correct time zone.", "Switch off your Wi-Fi, move approximately 50 feet and turn your Wi-Fi back on.",
-                        "Note: Some partner SSID networks do not support mobile devices.",
-                        "Boingo Wi-Finder App Users",
-                        "Check that your username and password are stored correctly in the Boingo app. (If you updated your password online or with a Boingo Customer Care agent, you will need to manually update it within your app settings.)"
-                    ],
-                    response: "Please indicate your response whether this was helpful or not",
+                    reply: ["Here are our popular smart phones"],
+                    response: "Please select one of the following for more information",
+                    cardDetails:[{title:"Iphone X", imageURL:"https://goo.gl/Eqx6g6", info:"64GB", url:"https://www.verizonwireless.com/smartphones/apple-iphone-x/", price:"$41.66/mo",rating:5, description:"Contract for 24 months"}, {title:"Galaxy S9", imageURL:"https://goo.gl/PCt3iT", info:"64GB", price:"$33.33/mo", url:"https://www.verizonwireless.com/smartphones/samsung-galaxy-s9/",rating:4, description:"Contract for 24 months"}],
                     buttons: ["Helpful", "Not Helpful"]
                 }
             ];
-        case "I'm Connected But Cannot Reach Internet":
+        case "Basic Phones":
             userResponse = null;
             customRequest = null;
-            if (action.payload.tracker.latest_message.text === "I'm Connected But Cannot Reach Internet") {
+            if (action.payload.tracker.latest_message.text === "Basic Phones") {
                 userResponse = action.payload.tracker.latest_message.text;
             } else {
                 customRequest = action.payload.tracker.latest_message.text;
@@ -125,17 +120,16 @@ export const chatMessages = (state = [], action) => {
                     userResponse: userResponse,
                     customRequest: customRequest,
                     url: null,
-                    reply: ["If you can connect to the network, but are unable to browse, try clearing the cache and cookies from your browser.",
-                        "If that is not successful, try a different web browser."
-                    ],
-                    response: "Indicate your response whether this was helpful or not",
+                    reply: ["Here are our popular basic phones"],
+                    response: "Please select one of the following for more information",
+                    cardDetails:[{title:"LG Exalt", imageURL:"https://goo.gl/ewxT3N",  info:"4GB", price:"$7.00/mo",rating:5, description:"Contract for 24 months"}, {title:"Kyocera Cadence", imageURL:"https://goo.gl/TyYpkY", price:"$5.00/mo",rating:5, description:"Contract for 24 months",info:"4GB"}],
                     buttons: ["Helpful", "Not Helpful"]
                 }
             ];
-        case "Device Limit Reached":
+        case "Pre-owned Phones":
             userResponse = null;
             customRequest = null;
-            if (action.payload.tracker.latest_message.text === "Device Limit Reached") {
+            if (action.payload.tracker.latest_message.text === "Pre-owned Phones") {
                 userResponse = action.payload.tracker.latest_message.text;
             } else {
                 customRequest = action.payload.tracker.latest_message.text;
@@ -148,19 +142,18 @@ export const chatMessages = (state = [], action) => {
                     userResponse: userResponse,
                     customRequest: customRequest,
                     url: null,
-                    reply: ["Phone? Check. Tablet? Check. Computer? Check. Gaming console? Check. We know you have multiple devices and each of them uses Wi-Fi. Heck, there are even refrigerators that use Wi-Fi!",
-                        "Managing those devices is as simple as logging into \"My Account\" and clicking \"Edit.\" Then, find \"Current Devices.\" From there you can add and delete devices from your account.",
-                        "Right now, your Broadband account allows you to connect up to three devices at the same time. Most devices are added to your account automatically when you sign in.",
-                        "For gaming consoles, find the MAC Address of your gaming console. Then, add it manually to your account."
-                    ],
-                    response: "Indicate your response whether this was helpful or not",
+                    reply: ["Here are our best pre-owned phones"],
+                    response: "Please select one of the following for more information",
+                    cardDetails:[{title:"Iphone 6s", imageURL:"https://goo.gl/rMVSZH", price:"$12.49/mo", info:"16GB",rating:5, description:"Contract for 24 months"}, {title:"Iphone 6s Plus", imageURL:"https://goo.gl/CG6uBF", price:"$19.79/mo",info:"16GB",rating:5, description:"Contract for 24 months"}],
                     buttons: ["Helpful", "Not Helpful"]
                 }
             ];
-        case "Frequent Disconnects":
+
+
+        case "Plans":
             userResponse = null;
             customRequest = null;
-            if (action.payload.tracker.latest_message.text === "Frequent Disconnects") {
+            if (action.payload.tracker.latest_message.text === "Plans") {
                 userResponse = action.payload.tracker.latest_message.text;
             } else {
                 customRequest = action.payload.tracker.latest_message.text;
@@ -173,18 +166,190 @@ export const chatMessages = (state = [], action) => {
                     userResponse: userResponse,
                     customRequest: customRequest,
                     url: null,
-                    reply: ["Sometimes there is a very simple fix if you are experiencing problems. Try these easy steps to get you back online.",
-                        "Confirm your Wi-Fi is turned on and you’re connected to the network named “Boingo Wireless,” “yourbasename_Wi-Fi,” “Boingo Wireless & yourlocation,” or similar.",
-                        "Check your Wi-Fi signal strength. If it is low, try moving to an area with a stronger signal.",
-                        "Check the MAC address of the device and make sure it is listed correctly in your account.",
-                        "Rebooting your device will sometimes correct connection problems.",
-                        "For gaming consoles, find the MAC Address of your gaming console. Then, add it manually to your account.",
-                        "If that is not successful, try a different web browser."
-                    ],
-                    response: "Indicate your response whether this was helpful or not",
+                    reply: ["I can surely help you with our plans"],
+                    response: "Here are our popular pland",
+                    buttons: ["Unlimited Plus", "Unlimited", "Limited"]
+                }
+            ];
+        case "Unlimited Plus":
+            userResponse = null;
+            customRequest = null;
+            if (action.payload.tracker.latest_message.text === "Unlimited Plus") {
+                userResponse = action.payload.tracker.latest_message.text;
+            } else {
+                customRequest = action.payload.tracker.latest_message.text;
+            }
+
+            return [
+                ...state,
+                {
+                    time: action.payload.tracker.latest_event_time,
+                    userResponse: userResponse,
+                    customRequest: customRequest,
+                    url: "https://www.verizonwireless.com/plans/verizon-plan/",
+                    reply: ["Here are our popular unlimited plus plans"],
+                    response: "More can be found in the link below",
+                    cardDetails:[{title:"One Line", imageURL:"https://goo.gl/Co3MCy", price:"$85.00/mo",info:"No Contract",rating:4, description:"Unlimited LTE 4G Data"}, {title:"Two Lines", imageURL:"https://goo.gl/Co3MCy", price:"$75.00/mo",info:"No Contract",rating:5, description:"Unlimited LTE 4G Data"}],
                     buttons: ["Helpful", "Not Helpful"]
                 }
             ];
+        case "Unlimited":
+            userResponse = null;
+            customRequest = null;
+            if (action.payload.tracker.latest_message.text === "Unlimited") {
+                userResponse = action.payload.tracker.latest_message.text;
+            } else {
+                customRequest = action.payload.tracker.latest_message.text;
+            }
+
+            return [
+                ...state,
+                {
+                    time: action.payload.tracker.latest_event_time,
+                    userResponse: userResponse,
+                    customRequest: customRequest,
+                    url: "https://www.verizonwireless.com/plans/verizon-plan/",
+                    reply: ["Here are our popular unlimited plans"],
+                    response: "More can be found in the link below",
+                    cardDetails:[{title:"One Line", imageURL:"https://goo.gl/Co3MCy", price:"$75.00/mo",info:"No Contract",rating:5, description:"Unlimited Data"}, {title:"Two Lines", imageURL:"https://goo.gl/Co3MCy", price:"$65.00/mo", info:"No Contract",rating:5, description:"Unlimited Data"}],
+
+                    buttons: ["Helpful", "Not Helpful"]
+                }
+            ];
+        case "Limited":
+            userResponse = null;
+            customRequest = null;
+            if (action.payload.tracker.latest_message.text === "Limited") {
+                userResponse = action.payload.tracker.latest_message.text;
+            } else {
+                customRequest = action.payload.tracker.latest_message.text;
+            }
+
+            return [
+                ...state,
+                {
+                    time: action.payload.tracker.latest_event_time,
+                    userResponse: userResponse,
+                    customRequest: customRequest,
+                    url: "https://www.verizonwireless.com/plans/verizon-plan/",
+                    reply: ["Here are our popular limited plans"],
+                    response: "More can be found in the link below",
+                    cardDetails:[{title:"One Line", imageURL:"https://goo.gl/Co3MCy", price:"$55.00/mo", info:"No Contract",rating:5, description:"15GB of Data"}, {title:"Two Lines", imageURL:"https://goo.gl/Co3MCy", price:"$45.00/mo",info:"No Contract",rating:5, description:"15GB of Data"}],
+                    buttons: ["Helpful", "Not Helpful"]
+                }
+            ];
+
+
+        case "Deals":
+            userResponse = null;
+            customRequest = null;
+            if (action.payload.tracker.latest_message.text === "Deals") {
+                userResponse = action.payload.tracker.latest_message.text;
+            } else {
+                customRequest = action.payload.tracker.latest_message.text;
+            }
+
+            return [
+                ...state,
+                {
+                    time: action.payload.tracker.latest_event_time,
+                    userResponse: userResponse,
+                    customRequest: customRequest,
+                    url: null,
+                    reply: ["I can surely help you with our best deals"],
+                    response: "Here are are our hot deals right now",
+                    buttons: ["Apple Deals", "Android Deals", "Tablets Deals", "Accessories Deals"]
+                }
+            ];
+        case "Apple Deals":
+            userResponse = null;
+            customRequest = null;
+            if (action.payload.tracker.latest_message.text === "Apple Deals") {
+                userResponse = action.payload.tracker.latest_message.text;
+            } else {
+                customRequest = action.payload.tracker.latest_message.text;
+            }
+
+            return [
+                ...state,
+                {
+                    time: action.payload.tracker.latest_event_time,
+                    userResponse: userResponse,
+                    customRequest: customRequest,
+                    url: null,
+                    reply: ["Here are our popular deals on apple devices"],
+                    response: "Please select one of the following for more information",
+                    cardDetails:[{title:"Iphone X", imageURL:"https://goo.gl/e6hThs", price:"$41.66/mo", description:"Buy one get one free",info:"24 mo Contract",rating:5}, {title:"Iphone 8", imageURL:"https://goo.gl/Qpk1Ga", price:"$33.33/mo", description:"Buy one get one free",info:"24 mo Contract",rating:5}],
+                    buttons: ["Helpful", "Not Helpful"]
+                }
+            ];
+        case "Android Deals":
+            userResponse = null;
+            customRequest = null;
+            if (action.payload.tracker.latest_message.text === "Android Deals") {
+                userResponse = action.payload.tracker.latest_message.text;
+            } else {
+                customRequest = action.payload.tracker.latest_message.text;
+            }
+
+            return [
+                ...state,
+                {
+                    time: action.payload.tracker.latest_event_time,
+                    userResponse: userResponse,
+                    customRequest: customRequest,
+                    url: null,
+                    reply: ["Here are our popular deals on android devices"],
+                    response: "Please select one of the following for more information",
+                    cardDetails:[{title:"Galaxy S9+", imageURL:"https://goo.gl/n9KRL1", price:"$38.74/mo", description:"Buy one get one free",info:"24 mo Contract",rating:5}, {title:"Galaxy S9", imageURL:"https://goo.gl/PCt3iT", price:"$33.33/mo", description:"Buy one get one free",info:"24 mo Contract",rating:4}],
+                    buttons: ["Helpful", "Not Helpful"]
+                }
+            ];
+        case "Tablets Deals":
+            userResponse = null;
+            customRequest = null;
+            if (action.payload.tracker.latest_message.text === "Tablets Deals") {
+                userResponse = action.payload.tracker.latest_message.text;
+            } else {
+                customRequest = action.payload.tracker.latest_message.text;
+            }
+
+            return [
+                ...state,
+                {
+                    time: action.payload.tracker.latest_event_time,
+                    userResponse: userResponse,
+                    customRequest: customRequest,
+                    url: null,
+                    reply: ["Here are our popular deals on tablets"],
+                    response: "Please select one of the following for more information",
+                    cardDetails:[{title:"Ipad Pro", imageURL:"https://goo.gl/6SbxWn", price:"$32.49.00/mo", description:"Buy one get one free",info:"24 mo Contract",rating:5}, {title:"Galaxy Tab", imageURL:"https://goo.gl/d7wB3F", price:"$26.16/mo", description:"Buy one get one free",info:"24 mo Contract",rating:4}],
+                    buttons: ["Helpful", "Not Helpful"]
+                }
+            ];
+        case "Accessories Deals":
+            userResponse = null;
+            customRequest = null;
+            if (action.payload.tracker.latest_message.text === "Accessories Deals") {
+                userResponse = action.payload.tracker.latest_message.text;
+            } else {
+                customRequest = action.payload.tracker.latest_message.text;
+            }
+
+            return [
+                ...state,
+                {
+                    time: action.payload.tracker.latest_event_time,
+                    userResponse: userResponse,
+                    customRequest: customRequest,
+                    url: null,
+                    reply: ["Here are our popular deals on accessories"],
+                    response: "Please select one of the following for more information",
+                    cardDetails:[{title:"Apple Watch 3", imageURL:"https://goo.gl/ctNiXa", price:"$399.99", description:"Aluminum 38mm Case with Sport Band",info:"Build in LTE",rating:5}, {title:"Apple Watch 3", imageURL:"https://goo.gl/nX1nvP", price:"$429.99",description:"Aluminum 42mm Case with Sport Band",info:"Build in LTE",rating:5}],
+                    buttons: ["Helpful", "Not Helpful"]
+                }
+            ];
+
 
 
         case "Manage Account":
@@ -205,7 +370,7 @@ export const chatMessages = (state = [], action) => {
                     url: null,
                     reply: ["Thank you, I can definitely help you out with Account."],
                     response: "Please describe your issue or question or Select a topic from frequently asked questions which can answer your question",
-                    buttons: ["Username and Password", "Upgrade Account", "Reactivate Account", "Review Plan Details", "Update Contact Information"]
+                    buttons: ["Username and Password", "Update Billing Information", "Update Contact Information", "Request Receipts"]
                 }
             ];
         case "Username and Password":
@@ -225,174 +390,9 @@ export const chatMessages = (state = [], action) => {
                     customRequest: customRequest,
                     url: null,
                     reply: ["Don't remember your username or password? We've all been there.",
-                        "Just visit My Account. Follow the \"forgot password\" link and enter the email address you use for your Boingo account.",
+                        "Just visit My Account. Follow the \"forgot password\" link and enter the email address you use for your Verizon account.",
                         "Then, you'll receive an email with a recovery link. When you follow the link, you'll see your username and will have the option to reset your password. It's that simple!",
                         "Didn't receive the recovery email? You can check your spam folder, or try using a different email address."
-                    ],
-                    response: "Indicate your response whether this was helpful or not",
-                    buttons: ["Helpful", "Not Helpful"]
-                }
-            ];
-        case "Upgrade Account":
-            userResponse = null;
-            customRequest = null;
-            if (action.payload.tracker.latest_message.text === "Upgrade Account") {
-                userResponse = action.payload.tracker.latest_message.text;
-            } else {
-                customRequest = action.payload.tracker.latest_message.text;
-            }
-
-            return [
-                ...state,
-                {
-                    time: action.payload.tracker.latest_event_time,
-                    userResponse: userResponse,
-                    customRequest: customRequest,
-                    url: "http://www.boingo.com/retail/boingo-wi-fi-plans/",
-                    reply: ["Click on the link to get a list of plans available on Boingo. You can update your plan in My Account"
-                    ],
-                    response: "Indicate your response whether this was helpful or not",
-                    buttons: ["Helpful", "Not Helpful"]
-                }
-            ];
-        case "Reactivate Account":
-            userResponse = null;
-            customRequest = null;
-            if (action.payload.tracker.latest_message.text === "Reactive Account") {
-                userResponse = action.payload.tracker.latest_message.text;
-            } else {
-                customRequest = action.payload.tracker.latest_message.text;
-            }
-
-            return [
-                ...state,
-                {
-                    time: action.payload.tracker.latest_event_time,
-                    userResponse: userResponse,
-                    customRequest: customRequest,
-                    url: "http://www.boingo.com/retail/boingo-wi-fi-plans/",
-                    reply: ["Sign in to My Account.",
-                        "If your account is inactive, you should see a message at the top of the page.",
-                        "Select \"choose a plan\" and select the plan that works best for you.",
-                        "Once your account is active, it's time to get your devices online.",
-                        "Completely power off your devices and wait 10 minutes.",
-                        "Turn them back on and they should get online automatically.",
-                        "Alternatively, you can log in from the \"Already a Customer?\" page."
-                    ],
-                    response: "Indicate your response whether this was helpful or not",
-                    buttons: ["Helpful", "Not Helpful"]
-                }
-            ];
-        case "Review Plan Details":
-            userResponse = null;
-            customRequest = null;
-            if (action.payload.tracker.latest_message.text === "Review Plan Details") {
-                userResponse = action.payload.tracker.latest_message.text;
-            } else {
-                customRequest = action.payload.tracker.latest_message.text;
-            }
-
-            return [
-                ...state,
-                {
-                    time: action.payload.tracker.latest_event_time,
-                    userResponse: userResponse,
-                    customRequest: customRequest,
-                    url: null,
-                    reply: ["Log in to My Account, where you can review your account summary and plan type."
-                    ],
-                    response: "Indicate your response whether this was helpful or not",
-                    buttons: ["Helpful", "Not Helpful"]
-                }
-            ];
-        case "Update Contact Information":
-            userResponse = null;
-            customRequest = null;
-            if (action.payload.tracker.latest_message.text === "Update Contact Information") {
-                userResponse = action.payload.tracker.latest_message.text;
-            } else {
-                customRequest = action.payload.tracker.latest_message.text;
-            }
-
-            return [
-                ...state,
-                {
-                    time: action.payload.tracker.latest_event_time,
-                    userResponse: userResponse,
-                    customRequest: customRequest,
-                    url: null,
-                    reply: ["You can update your contact information through \"My Account\".",
-                        "Log in to My Account and choose the “Update Contact Info” link on the left hand side. Make all the necessary changes and select \"Submit\". Your info is updated!"
-                    ],
-                    response: "Indicate your response whether this was helpful or not",
-                    buttons: ["Helpful", "Not Helpful"]
-                }
-            ];
-
-
-        case "Billing Inquiry":
-            userResponse = null;
-            customRequest = null;
-            if (action.payload.tracker.latest_message.text === "Billing Inquiry") {
-                userResponse = action.payload.tracker.latest_message.text;
-            } else {
-                customRequest = action.payload.tracker.latest_message.text;
-            }
-
-            return [
-                ...state,
-                {
-                    time: action.payload.tracker.latest_event_time,
-                    userResponse: userResponse,
-                    customRequest: customRequest,
-                    url: null,
-                    reply: ["Thank you, I can definitely help you out with Billing."],
-                    response: "Please describe your issue or question or Select a topic from frequently asked questions which can answer your question",
-                    buttons: ["Credits", "Request Receipts", "Update Billing Information", "Refund Inquiry"]
-                }
-            ];
-        case "Credits":
-            userResponse = null;
-            customRequest = null;
-            if (action.payload.tracker.latest_message.text === "Credits") {
-                userResponse = action.payload.tracker.latest_message.text;
-            } else {
-                customRequest = action.payload.tracker.latest_message.text;
-            }
-
-            return [
-                ...state,
-                {
-                    time: action.payload.tracker.latest_event_time,
-                    userResponse: userResponse,
-                    customRequest: customRequest,
-                    url: null,
-                    reply: ["Consumers can purchase the $1.99 Wi-Fi credits in advance or at the time of connect simply by confirming the purchase using their iTunes account login.",
-                        "The credits can be redeemed for 60 consecutive minutes of Wi-Fi access at a single Boingo hotspot, and can be used at any of the more than 125,000 Boingo hotspots worldwide."
-                    ],
-                    response: "Indicate your response whether this was helpful or not",
-                    buttons: ["Helpful", "Not Helpful"]
-                }
-            ];
-        case "Request Receipts":
-            userResponse = null;
-            customRequest = null;
-            if (action.payload.tracker.latest_message.text === "Request Receipts") {
-                userResponse = action.payload.tracker.latest_message.text;
-            } else {
-                customRequest = action.payload.tracker.latest_message.text;
-            }
-
-            return [
-                ...state,
-                {
-                    time: action.payload.tracker.latest_event_time,
-                    userResponse: userResponse,
-                    customRequest: customRequest,
-                    url: null,
-                    reply: ["Boingo receipt preferences are managed through \"My Account\".",
-                        "Login to My Account and select the “Update Contact Info” link on the left hand side.",
-                        "Scroll down to the bottom of the page and select/deselect the checkbox beside \"I would like to receive email receipts for all charges to my credit card\"."
                     ],
                     response: "Indicate your response whether this was helpful or not",
                     buttons: ["Helpful", "Not Helpful"]
@@ -414,143 +414,54 @@ export const chatMessages = (state = [], action) => {
                     userResponse: userResponse,
                     customRequest: customRequest,
                     url: null,
-                    reply: ["Boingo receipt preferences are managed through \"My Account\".",
+                    reply: ["You can update your billing information by following these steps","Log in to My Account and choose the “Update Billing Info” link on the left hand side. Make all the necessary changes and select \"Submit\".", "Your info is updated!"],
+                    response: "Indicate your response whether this was helpful or not",
+                    buttons: ["Helpful", "Not Helpful"]
+                }
+            ];
+
+        case "Update Contact Information":
+            userResponse = null;
+            customRequest = null;
+            if (action.payload.tracker.latest_message.text === "Update Contact Information") {
+                userResponse = action.payload.tracker.latest_message.text;
+            } else {
+                customRequest = action.payload.tracker.latest_message.text;
+            }
+
+            return [
+                ...state,
+                {
+                    time: action.payload.tracker.latest_event_time,
+                    userResponse: userResponse,
+                    customRequest: customRequest,
+                    url: null,
+                    reply: ["You can update your contact information through \"My Account\".",
+                        "Log in to My Account and choose the “Update Contact Info” link on the left hand side. Make all the necessary changes and select \"Submit\".", "Your info is updated!"
+                    ],
+                    response: "Indicate your response whether this was helpful or not",
+                    buttons: ["Helpful", "Not Helpful"]
+                }
+            ];
+        case "Request Receipts":
+            userResponse = null;
+            customRequest = null;
+            if (action.payload.tracker.latest_message.text === "Request Receipts") {
+                userResponse = action.payload.tracker.latest_message.text;
+            } else {
+                customRequest = action.payload.tracker.latest_message.text;
+            }
+
+            return [
+                ...state,
+                {
+                    time: action.payload.tracker.latest_event_time,
+                    userResponse: userResponse,
+                    customRequest: customRequest,
+                    url: null,
+                    reply: ["Verizon receipt preferences are managed through \"My Account\".",
                         "Login to My Account and select the “Update Contact Info” link on the left hand side.",
-                        "Update the information"
-                    ],
-                    response: "Indicate your response whether this was helpful or not",
-                    buttons: ["Helpful", "Not Helpful"]
-                }
-            ];
-        case "Refund Inquiry":
-            userResponse = null;
-            customRequest = null;
-            if (action.payload.tracker.latest_message.text === "Refund Inquiry") {
-                userResponse = action.payload.tracker.latest_message.text;
-            } else {
-                customRequest = action.payload.tracker.latest_message.text;
-            }
-
-            return [
-                ...state,
-                {
-                    time: action.payload.tracker.latest_event_time,
-                    userResponse: userResponse,
-                    customRequest: customRequest,
-                    url: "http://www.boingo.com/wi-fi-customer-support-cancel/",
-                    reply: ["Click on the link below and submit your ticket number"
-                    ],
-                    response: "Indicate your response whether this was helpful or not",
-                    buttons: ["Helpful", "Not Helpful"]
-                }
-            ];
-
-
-        case "Account Cancellation":
-            userResponse = null;
-            customRequest = null;
-            if (action.payload.tracker.latest_message.text === "Account Cancellation") {
-                userResponse = action.payload.tracker.latest_message.text;
-            } else {
-                customRequest = action.payload.tracker.latest_message.text;
-            }
-
-            return [
-                ...state,
-                {
-                    time: action.payload.tracker.latest_event_time,
-                    userResponse: userResponse,
-                    customRequest: customRequest,
-                    url: null,
-                    reply: ["Thank you, I can definitely help you out with Account Cancellation."],
-                    response: "Please describe your issue or question or Select a topic from frequently asked questions which can answer your question",
-                    buttons: ["Recurring Wi-Fi Subscription", "Itunes Subscriptions", "AsYouGo Plans", "Broadband Wi-Fi Subscription"]
-                }
-            ];
-        case "Recurring Wi-Fi Subscriptions":
-            userResponse = null;
-            customRequest = null;
-            if (action.payload.tracker.latest_message.text === "Recurring Wi-Fi Subscriptions") {
-                userResponse = action.payload.tracker.latest_message.text;
-            } else {
-                customRequest = action.payload.tracker.latest_message.text;
-            }
-
-            return [
-                ...state,
-                {
-                    time: action.payload.tracker.latest_event_time,
-                    userResponse: userResponse,
-                    customRequest: customRequest,
-                    url: null,
-                    reply: ["Subscriptions include: Boingo Mobile, Boingo Unlimited, Boingo Global, Boingo Europe Plus, Boingo UK & Ireland, and Boingo Asia Pacific.",
-                        "Once you have logged in to “My Account“, on the left panel you will see the “Cancel Subscription” link. Follow this link to cancel the recurring monthly payment or to cancel the account completely"
-                    ],
-                    response: "Indicate your response whether this was helpful or not",
-                    buttons: ["Helpful", "Not Helpful"]
-                }
-            ];
-        case "Itunes Subscriptions":
-            userResponse = null;
-            customRequest = null;
-            if (action.payload.tracker.latest_message.text === "Itunes Subscriptions") {
-                userResponse = action.payload.tracker.latest_message.text;
-            } else {
-                customRequest = action.payload.tracker.latest_message.text;
-            }
-
-            return [
-                ...state,
-                {
-                    time: action.payload.tracker.latest_event_time,
-                    userResponse: userResponse,
-                    customRequest: customRequest,
-                    url: null,
-                    reply: ["Customers who signed up for Boingo from Boingo WiFinder on the iOS app store can cancel from their device via “Manage Subscription” in the iPhone/iPad Settings menu."
-                    ],
-                    response: "Indicate your response whether this was helpful or not",
-                    buttons: ["Helpful", "Not Helpful"]
-                }
-            ];
-        case "AsYouGo Plans":
-            userResponse = null;
-            customRequest = null;
-            if (action.payload.tracker.latest_message.text === "AsYouGo Plans") {
-                userResponse = action.payload.tracker.latest_message.text;
-            } else {
-                customRequest = action.payload.tracker.latest_message.text;
-            }
-
-            return [
-                ...state,
-                {
-                    time: action.payload.tracker.latest_event_time,
-                    userResponse: userResponse,
-                    customRequest: customRequest,
-                    url: null,
-                    reply: ["Boingo AsYouGo and Hourly customers can stop charges by not logging in at hotspots."
-                    ],
-                    response: "Indicate your response whether this was helpful or not",
-                    buttons: ["Helpful", "Not Helpful"]
-                }
-            ];
-        case "Broadband Wi-Fi Subscriptions":
-            userResponse = null;
-            customRequest = null;
-            if (action.payload.tracker.latest_message.text === "Broadband Wi-Fi Subscriptions") {
-                userResponse = action.payload.tracker.latest_message.text;
-            } else {
-                customRequest = action.payload.tracker.latest_message.text;
-            }
-
-            return [
-                ...state,
-                {
-                    time: action.payload.tracker.latest_event_time,
-                    userResponse: userResponse,
-                    customRequest: customRequest,
-                    url: "http://www.boingo.com/deactivate/",
-                    reply: ["If you are a Boingo Broadband customer please on the link below to deactivate your account."
+                        "Scroll down to the bottom of the page and select/deselect the checkbox beside \"I would like to receive email receipts for all charges to my credit card\"."
                     ],
                     response: "Indicate your response whether this was helpful or not",
                     buttons: ["Helpful", "Not Helpful"]
@@ -613,20 +524,6 @@ export const chatMessages = (state = [], action) => {
                     buttons: ["Main Menu"]
                 }
             ];
-        // case "Describe Problem":
-        //     userResponse = null;
-        //     customRequest = action.payload.tracker.latest_message.text;
-        //     return [
-        //         ...state,
-        //         {
-        //             userResponse: userResponse,
-        //             customRequest: customRequest,
-        //             reply: ["Your request has been submitted with ticket number " + v4()],
-        //             response: "For other queries click on Main Menu.",
-        //             url: null,
-        //             buttons: ["Main Menu"]
-        //         }
-        //     ];
 
         default:
             return state;

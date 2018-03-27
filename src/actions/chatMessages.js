@@ -2,7 +2,7 @@ import fetch from "cross-fetch";
 
 export const onRequest = (request) =>{
     return dispatch => {
-        fetch("http://54.213.230.201:8000/conversations/default/parse?q=" + request)
+        fetch("http://54.213.230.201:8000/conversations/verizon/parse?q=" + request)
             .then(res => {
                 if (res.status >= 400) {
                     throw new Error("Bad response from server");
@@ -33,20 +33,48 @@ const receivedData =(response)=>{
             break;
 
 
-        case "Technical Support":
-            type="Technical Support";
+        case "Phones":
+            type="Phones";
             break;
-        case "Cannot Connect to Wifi":
-            type="Cannot Connect to Wifi";
+        case "Smart Phones":
+            type="Smart Phones";
             break;
-        case "I'm Connected But Cannot Reach Internet":
-            type="I'm Connected But Cannot Reach Internet";
+        case "Basic Phones":
+            type="Basic Phones";
             break;
-        case "Device Limit Reached":
-            type="Device Limit Reached";
+        case "Pre-owned Phones":
+            type="Pre-owned Phones";
             break;
-        case "Frequent Disconnects":
-            type="Frequent Disconnects";
+
+
+        case "Plans":
+            type = "Plans";
+            break;
+        case "Unlimited Plus":
+            type = "Unlimited Plus";
+            break;
+        case "Unlimited":
+            type = "Unlimited";
+            break;
+        case "Limited":
+            type = "Limited";
+            break;
+
+
+        case "Deals":
+            type = "Deals";
+            break;
+        case "Apple Deals":
+            type = "Apple Deals";
+            break;
+        case "Android Deals":
+            type = "Android Deals";
+            break;
+        case "Tablets Deals":
+            type = "Tablets Deals";
+            break;
+        case "Accessories Deals":
+            type = "Accessories Deals";
             break;
 
 
@@ -56,52 +84,16 @@ const receivedData =(response)=>{
         case "Username and Password":
             type = "Username and Password";
             break;
-        case "Upgrade Account":
-            type = "Upgrade Account";
+        case "Update Billing Information":
+            type = "Update Billing Information";
             break;
-        case "Reactivate Account":
-            type = "Reactivate Account";
-            break;
-        case "Review Plan Details":
-            type = "Review Plan Details";
+        case "Request Receipts":
+            type = "Request Receipts";
             break;
         case "Update Contact Information":
             type = "Update Contact Information";
             break;
 
-
-        case "Billing Inquiry":
-            type = "Billing Inquiry";
-            break;
-        case "Credits":
-            type = "Credits";
-            break;
-        case "Request Receipts":
-            type = "Request Receipts";
-            break;
-        case "Update Billing Information":
-            type = "Update Billing Information";
-            break;
-        case "Refund Inquiry":
-            type = "Refund Inquiry";
-            break;
-
-
-        case "Account Cancellation":
-            type = "Account Cancellation";
-            break;
-        case "Recurring Wi-Fi Subscription":
-            type = "Recurring Wi-Fi Subscription";
-            break;
-        case "Itunes Subscriptions":
-            type = "Itunes Subscriptions";
-            break;
-        case "AsYouGo Plans":
-            type = "AsYouGo Plans";
-            break;
-        case "Broadband Wi-Fi Subscriptions":
-            type = "Broadband Wi-Fi Subscriptions";
-            break;
 
 
         case "Not Helpful":
@@ -113,9 +105,6 @@ const receivedData =(response)=>{
         case "EmailId":
             type="EmailId";
             break;
-        // case "Describe Problem":
-        //     type="Describe Problem";
-        //     break;
     }
     return{
         type:type,
