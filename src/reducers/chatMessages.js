@@ -100,7 +100,7 @@ export const chatMessages = (state = [], action) => {
                     url: null,
                     reply: ["Here are our popular smart phones"],
                     response: "Please select one of the following for more information",
-                    cardDetails:[{title:"Iphone X", imageURL:"https://goo.gl/Eqx6g6", info:"64GB", url:"https://www.verizonwireless.com/smartphones/apple-iphone-x/", price:"$41.66/mo",rating:5, description:"Contract for 24 months"}, {title:"Galaxy S9", imageURL:"https://goo.gl/PCt3iT", info:"64GB", price:"$33.33/mo", url:"https://www.verizonwireless.com/smartphones/samsung-galaxy-s9/",rating:4, description:"Contract for 24 months"}],
+                    cardDetails:[{title:"Iphone X", imageURL:"https://goo.gl/Eqx6g6", info:"64GB", url:"https://www.verizonwireless.com/smartphones/apple-iphone-x/", price:"$41.66/mo",rating:5, description:"Contract for 24 months", description1:"Face ID is so secure you can use it with Apple Pay.", description2:"Your face is now your password.",feature:"Features"}, {title:"Galaxy S9", imageURL:"https://goo.gl/PCt3iT", info:"64GB", price:"$33.33/mo", url:"https://www.verizonwireless.com/smartphones/samsung-galaxy-s9/",rating:4, description:"Contract for 24 months", description1:"The Samsung Galaxy S9 is fast-charge compatible, so nothing slows you down", description2:"Use both the Iris Scanner and Facial Recognition to open your phone quickly and easily",feature:"Features"}],
                     buttons: ["Helpful", "Not Helpful"]
                 }
             ];
@@ -122,7 +122,7 @@ export const chatMessages = (state = [], action) => {
                     url: null,
                     reply: ["Here are our popular basic phones"],
                     response: "Please select one of the following for more information",
-                    cardDetails:[{title:"LG Exalt", imageURL:"https://goo.gl/ewxT3N",  info:"4GB", price:"$7.00/mo",rating:5, description:"Contract for 24 months"}, {title:"Kyocera Cadence", imageURL:"https://goo.gl/TyYpkY", price:"$5.00/mo",rating:5, description:"Contract for 24 months",info:"4GB"}],
+                    cardDetails:[{title:"LG Exalt", imageURL:"https://goo.gl/ewxT3N",  info:"4GB", price:"$7.00/mo",rating:5,feature:"Features", description:"Contract for 24 months", description1:"An integrated text-to-speech function reads your text messages out loud, ideal for situations.", description2:"LG Exalt LTE uses the Verizon 4G LTE network to enable HD Voice."}, {title:"Kyocera Cadence", imageURL:"https://goo.gl/TyYpkY", price:"$5.00/mo",rating:5, description:"Contract for 24 months",info:"4GB", description1:"Concentrate on what matters to you and not the disturbances nearby.", description2:"Talk, text and read in comfort with the Cadence LTE’s sleek, ergonomic design.",feature:"Features"}],
                     buttons: ["Helpful", "Not Helpful"]
                 }
             ];
@@ -144,7 +144,7 @@ export const chatMessages = (state = [], action) => {
                     url: null,
                     reply: ["Here are our best pre-owned phones"],
                     response: "Please select one of the following for more information",
-                    cardDetails:[{title:"Iphone 6s", imageURL:"https://goo.gl/rMVSZH", price:"$12.49/mo", info:"16GB",rating:5, description:"Contract for 24 months"}, {title:"Iphone 6s Plus", imageURL:"https://goo.gl/CG6uBF", price:"$19.79/mo",info:"16GB",rating:5, description:"Contract for 24 months"}],
+                    cardDetails:[{title:"Iphone 6s", imageURL:"https://goo.gl/rMVSZH", price:"$12.49/mo", info:"16GB",rating:5,feature:"Features", description:"Contract for 24 months", description1:"iPhone now senses how deeply you press the display, opening up new possibilities for how you interact with your content.", description2:"The world's most popular camera is even better than ever."}, {title:"Iphone 6s Plus", imageURL:"https://goo.gl/CG6uBF", price:"$19.79/mo",info:"16GB",rating:5, description:"Contract for 24 months",feature:"Features",description1:"The most advanced chip ever in a smartphone is even faster and now features an integrated M9 motion coprocessor.",description2:"iPhone now senses how deeply you press the display, opening up new possibilities for how you interact."}],
                     buttons: ["Helpful", "Not Helpful"]
                 }
             ];
@@ -189,7 +189,7 @@ export const chatMessages = (state = [], action) => {
                     url: "https://www.verizonwireless.com/plans/verizon-plan/",
                     reply: ["Here are our popular unlimited plus plans"],
                     response: "More can be found in the link below",
-                    cardDetails:[{title:"One Line", imageURL:"https://goo.gl/Co3MCy", price:"$85.00/mo",info:"No Contract",rating:4, description:"Unlimited LTE 4G Data"}, {title:"Two Lines", imageURL:"https://goo.gl/Co3MCy", price:"$75.00/mo",info:"No Contract",rating:5, description:"Unlimited LTE 4G Data"}],
+                    cardDetails:[{title:"One Line", imageURL:"https://goo.gl/Co3MCy", price:"$85.00/mo",info:"No Contract",rating:4, description:"Unlimited LTE 4G Data",feature:"Features",description1:"Premium unlimited 4G LTE data",description2:"Unlimited Talk & Text"}, {title:"Two Lines", imageURL:"https://goo.gl/Co3MCy", price:"$75.00/mo",info:"No Contract",rating:5, description:"Unlimited LTE 4G Data",feature:"Features", description2:"Unlimited Talk & Text", description1:"Unlimited 4G LTE data."}],
                     buttons: ["Helpful", "Not Helpful"]
                 }
             ];
@@ -211,7 +211,7 @@ export const chatMessages = (state = [], action) => {
                     url: "https://www.verizonwireless.com/plans/verizon-plan/",
                     reply: ["Here are our popular unlimited plans"],
                     response: "More can be found in the link below",
-                    cardDetails:[{title:"One Line", imageURL:"https://goo.gl/Co3MCy", price:"$75.00/mo",info:"No Contract",rating:5, description:"Unlimited Data"}, {title:"Two Lines", imageURL:"https://goo.gl/Co3MCy", price:"$65.00/mo", info:"No Contract",rating:5, description:"Unlimited Data"}],
+                    cardDetails:[{title:"One Line", imageURL:"https://goo.gl/Co3MCy", price:"$75.00/mo",info:"No Contract",rating:5, description:"Unlimited Data",feature:"Features", description2:"Unlimited Talk & Text", description1:"Unlimited 4G LTE data."}, {title:"Two Lines", imageURL:"https://goo.gl/Co3MCy", price:"$65.00/mo", info:"No Contract",rating:5, description:"Unlimited Data",feature:"Features", description2:"Unlimited Talk & Text", description1:"Unlimited 4G LTE data."}],
 
                     buttons: ["Helpful", "Not Helpful"]
                 }
@@ -234,7 +234,7 @@ export const chatMessages = (state = [], action) => {
                     url: "https://www.verizonwireless.com/plans/verizon-plan/",
                     reply: ["Here are our popular limited plans"],
                     response: "More can be found in the link below",
-                    cardDetails:[{title:"One Line", imageURL:"https://goo.gl/Co3MCy", price:"$55.00/mo", info:"No Contract",rating:5, description:"15GB of Data"}, {title:"Two Lines", imageURL:"https://goo.gl/Co3MCy", price:"$45.00/mo",info:"No Contract",rating:5, description:"15GB of Data"}],
+                    cardDetails:[{title:"One Line", imageURL:"https://goo.gl/Co3MCy", price:"$55.00/mo", info:"No Contract",rating:5, description:"15GB of Data", feature:"Features", description1:"Limited Data", description2:"Unlimited Talk & Text"}, {title:"Two Lines", imageURL:"https://goo.gl/Co3MCy", price:"$45.00/mo",info:"No Contract",rating:5, description:"15GB of Data", feature:"Features", description1:"Limited Data", description2:"Unlimited Talk & Text"}],
                     buttons: ["Helpful", "Not Helpful"]
                 }
             ];
@@ -279,7 +279,7 @@ export const chatMessages = (state = [], action) => {
                     url: null,
                     reply: ["Here are our popular deals on apple devices"],
                     response: "Please select one of the following for more information",
-                    cardDetails:[{title:"Iphone X", imageURL:"https://goo.gl/e6hThs", price:"$41.66/mo", description:"Buy one get one free",info:"24 mo Contract",rating:5}, {title:"Iphone 8", imageURL:"https://goo.gl/Qpk1Ga", price:"$33.33/mo", description:"Buy one get one free",info:"24 mo Contract",rating:5}],
+                    cardDetails:[{title:"Iphone X", imageURL:"https://goo.gl/e6hThs", price:"$41.66/mo", description:"Buy one get one free",info:"24 mo Contract",rating:5, feature:"Features", description1:"With iPhone X, the device is the display. An all-new 5.8 inch Super Retina screen fills the hand and dazzles the eyes.",description2:"The display employs new techniques and technology to precisely follow the curves of the design."}, {title:"Iphone 8", imageURL:"https://goo.gl/Qpk1Ga", price:"$33.33/mo", description:"Buy one get one free",info:"24 mo Contract",rating:5, feature:"Features", description1:"The most durable glass ever in a smartphone, front and back.", description2:"iPhone 8 features a more advanced 12MP camera. With a larger, faster sensor. A new color filter."}],
                     buttons: ["Helpful", "Not Helpful"]
                 }
             ];
@@ -301,7 +301,7 @@ export const chatMessages = (state = [], action) => {
                     url: null,
                     reply: ["Here are our popular deals on android devices"],
                     response: "Please select one of the following for more information",
-                    cardDetails:[{title:"Galaxy S9+", imageURL:"https://goo.gl/n9KRL1", price:"$38.74/mo", description:"Buy one get one free",info:"24 mo Contract",rating:5}, {title:"Galaxy S9", imageURL:"https://goo.gl/PCt3iT", price:"$33.33/mo", description:"Buy one get one free",info:"24 mo Contract",rating:4}],
+                    cardDetails:[{title:"Galaxy S9+", imageURL:"https://goo.gl/n9KRL1", price:"$38.74/mo", description:"Buy one get one free",info:"24 mo Contract",rating:5, feature:"Features", description1:"Adjust shutter speeds, set exposure levels, select filters and more using Pro Mode. Optical Image Stabilization (OIS) compensates for your movement.",description2:"Experience edge-to-edge entertainment with an Infinity Display."}, {title:"Galaxy S9", imageURL:"https://goo.gl/PCt3iT", price:"$33.33/mo", description:"Buy one get one free",info:"24 mo Contract",rating:4, feature:"Features", description1:"Radical 960 FPS super slow-mo captures up to 4 times as many frames per second,³ so you can slow down reality and enjoy every frame.", description2:"Adjust shutter speeds, set exposure levels, select filters and more using Pro Mode."}],
                     buttons: ["Helpful", "Not Helpful"]
                 }
             ];
@@ -323,7 +323,7 @@ export const chatMessages = (state = [], action) => {
                     url: null,
                     reply: ["Here are our popular deals on tablets"],
                     response: "Please select one of the following for more information",
-                    cardDetails:[{title:"Ipad Pro", imageURL:"https://goo.gl/6SbxWn", price:"$32.49.00/mo", description:"Buy one get one free",info:"24 mo Contract",rating:5}, {title:"Galaxy Tab", imageURL:"https://goo.gl/d7wB3F", price:"$26.16/mo", description:"Buy one get one free",info:"24 mo Contract",rating:4}],
+                    cardDetails:[{title:"Ipad Pro", imageURL:"https://goo.gl/6SbxWn", price:"$32.49.00/mo", description:"Buy one get one free",info:"24 mo Contract",rating:5, feature:"Features",description1:"Even though it?s packed with amazing performance, an advanced display, two cameras, ultrafast wireless, and all-day battery life, iPad Pro is still sleek and compact.",description2:"Do the things you love from pretty much anywhere with 802.11ac Wi-Fi and LTE Advanced."}, {title:"Galaxy Tab", imageURL:"https://goo.gl/d7wB3F", price:"$26.16/mo", description:"Buy one get one free",info:"24 mo Contract",rating:4, feature:"Features", description1:"View your movies and shows in cinematic detail with the Galaxy Tab S3?s Super AMOLED screen.", description2:"An innovative quad speaker system delivers rich, full stereo sound. Rotating your Galaxy Tab S3 makes the speaker orientation adjust."}],
                     buttons: ["Helpful", "Not Helpful"]
                 }
             ];
@@ -345,7 +345,7 @@ export const chatMessages = (state = [], action) => {
                     url: null,
                     reply: ["Here are our popular deals on accessories"],
                     response: "Please select one of the following for more information",
-                    cardDetails:[{title:"Apple Watch 3", imageURL:"https://goo.gl/ctNiXa", price:"$399.99", description:"Aluminum 38mm Case with Sport Band",info:"Build in LTE",rating:5}, {title:"Apple Watch 3", imageURL:"https://goo.gl/nX1nvP", price:"$429.99",description:"Aluminum 42mm Case with Sport Band",info:"Build in LTE",rating:5}],
+                    cardDetails:[{title:"Apple Watch 3", imageURL:"https://goo.gl/ctNiXa", price:"$399.99", description:"Aluminum 38mm Case with Sport Band",info:"Build in LTE",rating:5, feature:"Features", description1:"With just a tap, you can start an in-ear Audio Guided Run featuring the voice of a Nike+ Run Club coach, world-class athlete, or special guest.", description2:"Apple Watch Series 3 Nike+ Aluminum 38mm Case - Sport Loop comes with all the features of Apple Watch Series 3."}, {title:"Apple Watch 3", imageURL:"https://goo.gl/nX1nvP", price:"$429.99",description:"Aluminum 42mm Case with Sport Band",info:"Build in LTE",rating:5, feature:"Features", description1:"Apple Watch Series 3 Nike+ Aluminum 42mm Case - Sport Band comes with all the features of Apple Watch Series 3. Including cellular, which lets you take calls, send messages, and stream music even when you leave your phone behind.",description2:""}],
                     buttons: ["Helpful", "Not Helpful"]
                 }
             ];

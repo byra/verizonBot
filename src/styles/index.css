@@ -4589,6 +4589,8 @@ mark,
       display: inline-block;
       width: 100%; } }
 
+
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -4633,5 +4635,30 @@ body {
       background-color: #FFFFFF; }
     .chat-container .chat-footer img {
       height: 2.5em; }
+
+
+.content {    
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 1.5s;
+}
+
+.front,
+.back {   
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+
+.back {
+  position: absolute;
+  transform: rotateY( 180deg );
+}
+
 
 /*# sourceMappingURL=index.css.map */
