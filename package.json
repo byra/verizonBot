@@ -34,12 +34,8 @@
     "cross": "^1.0.0",
     "cross-fetch": "^2.1.0",
     "jquery": "^3.3.1",
-<<<<<<< HEAD
-    "react": "^16.2.0",
     "react-card-flip": "^0.2.1",
-=======
     "react": "^16.3.0",
->>>>>>> 9d912e3c27d2f311a3cb44fecf8646990cd62581
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "react-star-rating-component": "^1.4.1",
